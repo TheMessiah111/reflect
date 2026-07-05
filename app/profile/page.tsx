@@ -3,12 +3,8 @@ import {LayoutGridIcon, User, MessageSquareMore, MessageCircleMoreIcon, HeartHan
         CalendarRangeIcon, BriefcaseBusinessIcon, FileTextIcon,
         BookCheckIcon, LucideBuilding2, LucideFileChartLine,Medal, ChartNoAxesCombinedIcon,
         ChartBar, CogIcon,
-        MessageCircle,
-        Building2Icon,
         ArrowRight,
-        Circle,
         Bell} from 'lucide-react'
-import Dashgroup from '@/components/profile/dashgroup'
 import Image from 'next/image'
 import Profilecard from '@/components/profile/profilecard'
 import ProfileEntries from '@/components/profile/profileEntries'
@@ -137,11 +133,11 @@ const Dashboard = () => {
                 <div className=' relative w-2/6 h-full px-2 bg-[#ffffffe2]'>
                     <div className='mt-5 ml-5'>
                         <div className='h-30 w-30 mb-4 rounded-2xl '>
-                            <img src='/Wisdom_C.jpeg' alt='Profile Pic' className='rounded-3xl'/>
+                            <Image src='/Wisdom_C.jpeg' alt='Profile Pic' width={120} height={120} className='rounded-3xl'/>
                         </div>
                         <div>
-                            <p>PROMISE DANIEL</p>
-                            <span>Human Resources Manager</span>
+                            <p className='font-bold text-sm text-blue-900'>OLUWAROTIMI EKUNDAYO</p>
+                            <span className='text-sm'>Human Resources Manager</span>
                         </div>
                     </div>
                     <div>
@@ -169,9 +165,31 @@ const Dashboard = () => {
                             Personal
                         </div>
                 </div>
-                <div className='flex flex-row'>
-                    <ProfileEntries/>
-                    <ProfileEntries/>
+                <div className='grid grid-cols-3 mt-4 mb-5 bg-[#ffffffe2]'>
+                    <ProfileEntries header='First Name' body='OLUWAROTIMI' />
+                    <ProfileEntries header='Middle Name' body='RICHARDS' />
+                    <ProfileEntries header='Last Name' body='EKUNDAYO' />
+                    <ProfileEntries header='Date Of Birth' body='2021-06-03' />
+                    <ProfileEntries header='Age' body='5' />
+                    <ProfileEntries header='Hire Date' body='2023-06-23' />
+                    <ProfileEntries header='Sex' body='Male' />
+                    <ProfileEntries header='Employee Type' body='DIRECT HIRE' />
+                    <ProfileEntries header='Job Title' body='Human Resources Manager' />
+                    <ProfileEntries header='Title' body='MR' />
+                    <ProfileEntries header='Staff ID' body='HYD-12344' />
+                    <ProfileEntries header='Preffered Name' body='ROZAY' />
+                    <ProfileEntries header='Previous Name' body='OLA' />
+                    <ProfileEntries header='Maidan Name ' body='N/A' />
+                    <ProfileEntries header='Fathers Name' body='EKUNDAYO ANDREW' />
+                    <ProfileEntries header ='Mothers Name' body='EKUNDAYO RUTH'/>
+                    <ProfileEntries header ='Maidan Name' body='N/A'/>
+                    <ProfileEntries header ='Marital Status' body='MARRIED'/>
+                    <ProfileEntries header ='No of Children' body='100'/>
+                    <ProfileEntries header ='Phone Number' body='091838292493'/>
+                    <ProfileEntries header ='Religion' body='CHRISTIANITY'/>
+                    <ProfileEntries header ='City of Origin' body='Ibadan'/>
+                    <ProfileEntries header ='State of Origin' body='Oyo'/>
+                    <ProfileEntries header ='City of Residence' body='Ibadan'/>
                 </div>
                 </div>
             </div>

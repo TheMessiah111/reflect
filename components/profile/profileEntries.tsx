@@ -1,8 +1,14 @@
 import React from 'react'
-
-const ProfileEntries = () => {
+interface ProfileEntryProps{
+  header: string;
+  body: string;
+}
+const ProfileEntries = ({header,body}: ProfileEntryProps) => {
   return (
-    <div>ProfileEntries</div>
+    <div className='grid-cols-3 ml-4 mt-2 md-4 mr-8 p-2 '>
+      <h3 className='text-[#484848] text-sm'>{header}</h3>
+      <p className='text-[#000000] font-bold'>{body}</p>
+    </div>
   )
 }
 
