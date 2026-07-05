@@ -2,11 +2,18 @@ import React from 'react'
 import {LayoutGridIcon, User, MessageSquareMore, MessageCircleMoreIcon, HeartHandshake, 
         CalendarRangeIcon, BriefcaseBusinessIcon, FileTextIcon,
         BookCheckIcon, LucideBuilding2, LucideFileChartLine,Medal, ChartNoAxesCombinedIcon,
-        ChartBar, CogIcon} from 'lucide-react'
-    
+        ChartBar, CogIcon,
+        Divide} from 'lucide-react'
+   
+        
+interface DashBoardItemsProps{
+    icon?: React.ReactNode;
+    name:string;
+    href: string;
+}
 interface DashGroupProps{
     header: string;
-    dashboarditems: string[];
+    dashboarditems: DashBoardItemsProps[];
 }
 const Dashgroup = ({header, dashboarditems}: DashGroupProps) => {
   return (
@@ -16,9 +23,13 @@ const Dashgroup = ({header, dashboarditems}: DashGroupProps) => {
             {header}
         </div>
         <div>
-            {/* {
-            dashboarditems.map
-            } */}
+            {
+            dashboarditems.map((items)=>
+                <div key={items.href}>
+                {items.name}
+                </div>
+            )
+            }
         </div>
     </div>
   )
