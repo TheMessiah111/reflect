@@ -1,10 +1,3 @@
-import React from 'react'
-import {LayoutGridIcon, User, MessageSquareMore, MessageCircleMoreIcon, HeartHandshake, 
-        CalendarRangeIcon, BriefcaseBusinessIcon, FileTextIcon,
-        BookCheckIcon, LucideBuilding2, LucideFileChartLine,Medal, ChartNoAxesCombinedIcon,
-        ChartBar, CogIcon,
-        Divide} from 'lucide-react'
-   
         
 interface DashBoardItemsProps{
     icon?: React.ReactNode;
