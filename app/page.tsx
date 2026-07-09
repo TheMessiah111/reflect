@@ -15,14 +15,14 @@ const Dashboard = () => {
   return (
     <div className="flex">
         {/* Sidebar */}
-        <div className="fixed flex-1 top-0 left-0 w-55 h-full bg-[#242462] overflow-x-clip flex flex-col items-center text-white">
+        <div className=" w-64 h-screen bg-[#242462] overflow-x-clip overflow-y-auto overscroll-contain scrollbar-none flex flex-col items-center text-white">
             {/* Logo */}
-            <div className=" w-full flex justify-center items-center py-1 pr-19">
+            <div className=" w-full flex pt-4 mr-17 pb-3 justify-center text-white">
             <LayoutGridIcon height={50} width={50} />
             </div>
 
             {/* Divider */}
-            <hr className="w-full border-t border-amber-100" />
+            <hr className="w-full my-3" />
 
             {/* Sidebar Content */}
             <div className=" w-full mt-0 text-center">
@@ -102,7 +102,7 @@ const Dashboard = () => {
         </div>
 
         {/* Main Content */}
-        <div className="flex-1 ml-55 min-h-screen bg-[#a5a1a16d]">
+        <div className="flex-1 h-screen bg-[#a5a1a16d] overflow-y-auto overscroll-contain">
             {/* Header side bar  */}
             <div className='bg-[#ffffff] h-16 flex justify-between items-center text-sm'>
                 <div className='flex mx-3 gap-2 text-[#242462]'>Home <ArrowRight/>Dashboard <ArrowRight/>My Profile</div>
